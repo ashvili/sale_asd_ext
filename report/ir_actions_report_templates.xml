@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_saleorder_document_asd_ext"
+    inherit_id="sale.report_saleorder_document">
+    <xpath expr="//div[@id='informations']" position="before">
+        <h5>
+            <div t-if="doc.test">
+                <span t-field="doc.test"/>
+            </div>
+            <div t-else="">
+                <span>Field "Info" is empty</span>
+            </div>
+        </h5>
+    </xpath>
+
+</template>
+
+
+</odoo>
